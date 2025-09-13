@@ -10,4 +10,4 @@ license: mit
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
 
-!!!!RUN WORKFLOW NOWWW!!!!
+!!!!RUN WORKFLOW NOWWWW!!!!
