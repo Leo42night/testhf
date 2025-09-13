@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
 	 
       - name: Debug token
-        run: echo "HF_TOKEN=${HF_TOKEN}" # periksa token terdeteksi
+        run: echo "HF_TOKEN starts with => ${HF_TOKEN:0:4}..." # periksa token terdeteksi
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
       
@@ -20,7 +20,7 @@ jobs:
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git clone https://username:$HF_TOKEN@huggingface.co/spaces/username/namaspace space_repo
+          git clone https://username:$HF_TOKEN@huggingface.co/spaces/leo42night/test space_repo
           rsync -av --exclude='.git' ./ space_repo/
           cd space_repo
           git add .
