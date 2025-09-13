@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-	 
+
       - name: Debug token
         run: echo "HF_TOKEN starts with => ${HF_TOKEN:0:4}..." # periksa token terdeteksi
         env:
